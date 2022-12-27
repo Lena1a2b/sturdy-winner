@@ -51,21 +51,18 @@ public class Test1Test {
   }
   @Test
   public void test1() {
-    driver.get("https://www.google.com/search?q=skillfactory+%D0%B2%D1%85%D0%BE%D0%B4&rlz=1C1CHBD_enRU1025RU1025&oq=&aqs=chrome.0.35i39i362l8.684920j0j15&sourceid=chrome&ie=UTF-8");
+    driver.get("https://www.google.com/");
     driver.manage().window().setSize(new Dimension(562, 740));
+    driver.findElement(By.name("q")).click();
+    driver.findElement(By.cssSelector(".sbhl .wM6W7d > span")).click();
     driver.findElement(By.cssSelector(".MjjYud:nth-child(2) .LC20lb")).click();
+    js.executeScript("window.scrollTo(0,200)");
     vars.put("window_handles", driver.getWindowHandles());
     driver.findElement(By.cssSelector(".fr-dib:nth-child(1)")).click();
-    vars.put("win981", waitForWindow(2000));
-    driver.switchTo().window(vars.get("win981").toString());
-    driver.findElement(By.cssSelector(".tn-elem__4681130601654775842275 > .tn-atom")).click();
-    {
-      WebElement element = driver.findElement(By.linkText("Веб-разработка"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
-    }
+    vars.put("win605", waitForWindow(2000));
+    driver.switchTo().window(vars.get("win605").toString());
     driver.findElement(By.linkText("Веб-разработка")).click();
-    js.executeScript("window.scrollTo(0,11)");
-    driver.findElement(By.cssSelector(".t795 > .t-container")).click();
+    js.executeScript("window.scrollTo(0,400)");
+    driver.findElement(By.linkText("Backend-разработка")).click();
   }
 }
