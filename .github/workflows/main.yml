@@ -13,20 +13,15 @@ public class Calculator1 {
 				System.out.println("Введите  число:");
 				int num2 = scanner.nextInt();
 				switch (oper) {
-				case '+':
-					num1 += num2;
+				case ('+'):num1 += num2;
 					break;
-				case '-':
-					num1 -= num2;
+				case ('-'):num1 -= num2;
 					break;
-				case '*':
-					num1 *= num2;
+				case ('*'):num1 *= num2;
 					break;
-				case '/':
-					num1 /= num2;
+				case ('/'):num1 /= num2;
 					break;
-				default:
-					System.out.print("Вы ввели неподходящий знак операции");
+				default:System.out.print("Вы ввели неподходящий знак операции");
 				}
 				System.out.print("Результат  " + num1 + "\n");
 			}
