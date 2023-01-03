@@ -34,12 +34,10 @@ public class Calculator1 {
 		Scanner scanner = new Scanner(System.in);
 		char key = scanner.next().charAt(0);
 		switch (key) {
-		case 's':
-			System.exit(0);
+		case 's':System.exit(0);
 			scanner.close();
 			break;
-		case 'c':
-			num1 = 0;
+		case 'c': num1 = 0;
 		}
 		return num1;
 	}
